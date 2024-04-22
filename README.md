@@ -1,4 +1,4 @@
-하치 프로젝트 | Hachi Project | 蜂プロジェクト
+Hachi Project | 하치 프로젝트 | 蜂プロジェクト
 ============================================
 <h3>
 yours, for you, about you
