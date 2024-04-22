@@ -9,7 +9,6 @@ import (
 func main() {
 	a := app.New()
 	w := a.NewWindow("Hello")
-
 	hello := widget.NewLabel("Hello Fyne!")
 	w.SetContent(container.NewVBox(
 		hello,
