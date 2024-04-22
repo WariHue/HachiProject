@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-module github.com/warihue/HachiProject
-
-go 1.22.2
-=======
 module hachi
 
 go 1.21.3
@@ -37,4 +32,3 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	honnef.co/go/js/dom v0.0.0-20210725211120-f030747120f2 // indirect
 )
->>>>>>> ac3d92ff42927c6c09fe1d3d74349de457b62397
