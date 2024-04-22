@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 하치 프로젝트 | Hachi Project | 蜂プロジェクト
+=======
+Hachi Project | 하치 프로젝트 | 蜂プロジェクト
+>>>>>>> ac3d92ff42927c6c09fe1d3d74349de457b62397
 ============================================
 <h3>
 yours, for you, about you
