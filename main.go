@@ -12,6 +12,7 @@ func main() {
 	w := a.NewWindow("Hello")
 	w.Resize(fyne.NewSize(1680, 960))
 	hello := widget.NewLabel("Hello Fyne!")
+	w.SetMainMenu(makeMenu())
 	w.SetContent(container.NewVBox(
 		hello,
 		widget.NewButton("Hi!", func() {
@@ -23,4 +24,15 @@ func main() {
 	))
 
 	w.ShowAndRun()
+}
+
+func makeMenu() *fyne.MainMenu {
+	newItem := fyne.NewMenuItem("New", nil)
+	checkedItem := fyne.NewMenuItem("Checked", nil)
+	checkedItem.Checked = true
+	disabledItem := fyne.NewMenuItem("Disabled", nil)
+	disabledItem.Disabled = true
+	file := fyne.NewMenu("File", newItem, checkedItem, disabledItem)
+	main := fyne.NewMainMenu(file)
+	return main
 }
