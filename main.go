@@ -27,12 +27,12 @@ func main() {
 }
 
 func makeMenu() *fyne.MainMenu {
-	newItem := fyne.NewMenuItem("New", nil)
-	checkedItem := fyne.NewMenuItem("Checked", nil)
-	checkedItem.Checked = true
-	disabledItem := fyne.NewMenuItem("Disabled", nil)
-	disabledItem.Disabled = true
-	file := fyne.NewMenu("File", newItem, checkedItem, disabledItem)
-	main := fyne.NewMainMenu(file)
+	newFileItem := fyne.NewMenuItem("New File", nil)
+	newWindowItem := fyne.NewMenuItem("New Window", nil)
+	openFileItem := fyne.NewMenuItem("Open File", nil)
+	openFolderItem := fyne.NewMenuItem("Open Folder", nil)
+	file := fyne.NewMenu("File", newFileItem, newWindowItem, fyne.NewMenuItemSeparator(), openFileItem, openFolderItem)
+	edit := fyne.NewMenu("Edit", newFileItem, newWindowItem, fyne.NewMenuItemSeparator(), openFileItem)
+	main := fyne.NewMainMenu(file, edit)
 	return main
 }
