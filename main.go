@@ -11,18 +11,22 @@ func main() {
 	a := app.New()
 	w := a.NewWindow("Hello")
 	w.Resize(fyne.NewSize(1680, 960))
-	hello := widget.NewLabel("Hello Fyne!")
 	w.SetMainMenu(makeMenu())
-	w.SetContent(container.NewVBox(
-		hello,
-		widget.NewButton("Hi!", func() {
-			hello.SetText("Welcome :)")
-		}),
-		widget.NewButton("quit", func() {
-			a.Quit()
-		}),
-	))
-
+	// splitSource := container.NewVBox(
+	// 	widget.NewButton("quit", func() {
+	// 		a.Quit()
+	// 	}),
+	// )
+	listSource := widget.NewList(
+		func() int { return 1 },
+		func() fyne.CanvasObject { return widget.NewLabel("a") },
+		func(lii widget.ListItemID, co fyne.CanvasObject) {
+			co.(*widget.Label).SetText("T")
+		},
+	)
+	splitInst := container.NewHSplit(listSource, nil)
+	w.SetContent(splitInst)
+	// w.SetContent(splitSource)
 	w.ShowAndRun()
 }
 
